@@ -16,10 +16,12 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    npm audit fix
+  displayName: 'npm audit fixing'
+
+- script: |
     npm install
     npm run build
   displayName: 'npm install and build'
 
-- script: |
-    npm audit fix
-  displayName: 'npm audit fixing'
+
